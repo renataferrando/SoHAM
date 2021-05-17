@@ -1,5 +1,5 @@
 
-.body {
+.body, .body-AB {
   font-family: montserrat, sans-serif;
 }
 .col-md-4 {
@@ -186,30 +186,88 @@ b {
 #map {
  padding: 20px;
 }
+
 /*Nosotros*/
 .body-AB {
-  background: url(../img/AB-bg.jpg) no-repeat center center fixed; 
+  background: #FF8000;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-
 }
+
 #contNP {
   display: flex;
   justify-content: center;
   margin-top: 80px;
-  margin-bottom: 1000px;
+  margin-bottom: 150px;
+
 }
 
 .contN {
   display: flex;
   align-self: center;
   background-color: white;
-  height: 700px;
-  width: 90%;
+  height: auto;
+  width: 80%;
 }
 
+.contN-tit {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  font-weight: 200;
+  padding: 20px;
+  margin-left:50px;
+  font-size: 40pt;
+}
+
+.contN2-parr {
+  font-weight: 300;
+  padding: 50px;
+  margin-left: 50px;
+  margin-top: 50px;
+  text-align: justify;
+}
+
+.contN-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.contN2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.contN-img {
+  width: 50%;
+  display: flex;
+  align-self: center;
+  margin-bottom: 50px;
+}
+#contNP1 {
+  display: flex;
+  justify-content: center;
+}
+.contN3 {
+  border: 2px solid white;
+  padding: 30px;
+  position: relative;
+  left: 200px;
+}
+.contN2-h2, .contN2-h3{
+  margin-right: 50px;
+  text-align: right;
+  font-style: italic;
+}
+.contN2-h2 {
+  font-size: 16pt;  
+}
+.contN2-h3 {
+  font-size: 12pt;
+  margin-bottom: 50px; 
+}
 @media only screen and (max-width: 375px) {
   .container-fluid__capa {
     background: rgba(30, 0, 0, 0.5);
