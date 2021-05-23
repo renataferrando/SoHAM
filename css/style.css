@@ -70,11 +70,20 @@
 
 .contP1_img1 {
   position: relative;
-  right: 50px;
-  width: 580px;
-  height: 366px;
-  top: 60px;
+  width: auto;
+  left: 50px;
+  top: 50px;
 }
+.contP1_img1v {
+  position: relative;
+  width: auto;
+  top: 50px;
+  right: 50px;
+}
+#contRow {
+  margin-top: 30px;
+}
+
 .contP3_img {
   width: 60%;
   position: relative;
@@ -82,10 +91,14 @@
   left: 250px;
 }
 .contP3_img-v {
-  width: 75%;
+  width: 60%;
   position: relative;
   bottom: 10px;
   left: 250px;
+}
+
+#contP1 {
+  background: rgba(91, 44, 111);
 }
 #contP2 {
   display: flex;
@@ -93,6 +106,8 @@
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  padding: 0;
+  height: auto;
 }
 
 #contP3 {
@@ -100,6 +115,8 @@
   flex-direction: column;
   position: relative;
   margin-top: 50px;
+  padding: 0;
+  margin-bottom: 80px;
 }
 
 b {
@@ -119,21 +136,7 @@ b {
   font-weight: 300;
   text-align: center;
   width: 80%;
-}
-.contP1_bg {
-  background: rgba(91, 44, 111);
-  position: relative;
-  height: 450px;
   margin-top: 50px;
-  left: 80px;
-  width: 600px;
-}
-.contP1_bg-v {
-  background: rgba(91, 44, 111);
-  position: relative;
-  height: 450px;
-  margin-top: 50px;
-  width: auto;
 }
 
 .contP3_parr {
@@ -147,15 +150,8 @@ b {
   position: relative;
   font-weight: 500;
   font-style: italic;
-
-
 }
-#texto2P {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  width: 70%;
-}
+
 /*Contacto*/
 
 .imgC {
@@ -268,15 +264,39 @@ b {
   font-size: 12pt;
   margin-bottom: 50px; 
 }
-@media only screen and (max-width: 375px) {
-  .container-fluid__capa {
-    background: rgba(30, 0, 0, 0.5);
+#contQL {
+  margin-left: 250px;
+}
+@media only screen and (min-width: 360px) and (max-width: 1239px) {
+  /*main*/
+   .container-fluid__capa {
     position: relative;
     width: 100%;
     top: 0;
-    right: 0; }
-    
-    .tituloMain, #map {
+    right: 0;
+  }
+  /*practicas*/
+    .contP1_img1, .contP1_img1v {
+    height: 233px;
+    width: 345px; 
+    position: sticky;
+    top: 30px;
+
+    }
+  .contP3_img, .contP3_img-v {
+    display: flex;
+    position: sticky;
+    width: auto;
+  }
+
+  .contP3_parr {
+    width: auto;
+  }
+  
+  .carousel-item {
+    height: auto;
+  }
+  .tituloMain, #map {
     padding: 0;
     color: white;
     margin-top: 0;
@@ -304,8 +324,91 @@ b {
     padding: 0;
     left: 0;
   }
-}
+  #contQL {
+  margin-left: 0;
+  }
+  /*Nosotros*/
+  .body-AB {
+  background: #FF8000;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
 
+  #contNP {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 150px;
+
+  }
+
+  .contN {
+    display: flex;
+    align-self: center;
+    background-color: white;
+    height: auto;
+    width: 80%;
+  }
+
+  .contN-tit {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-weight: 200;
+    padding: 20px;
+    margin-left:50px;
+    font-size: 40pt;
+  }
+
+  .contN2-parr {
+    font-weight: 300;
+    padding: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+    text-align: justify;
+  }
+
+  .contN-1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contN2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contN-img {
+    width: 50%;
+    display: flex;
+    align-self: center;
+    margin-bottom: 50px;
+  }
+  #contNP1 {
+    display: flex;
+    justify-content: center;
+  }
+  .contN3 {
+    border: 2px solid white;
+    padding: 30px;
+    position: relative;
+    left: 200px;
+  }
+  .contN2-h2, .contN2-h3{
+    margin-right: 50px;
+    text-align: right;
+    font-style: italic;
+  }
+  .contN2-h2 {
+    font-size: 16pt;  
+  }
+  .contN2-h3 {
+    font-size: 12pt;
+    margin-bottom: 50px; 
+  }
+}
 
 .site-footer {
   background-color: #26272b;

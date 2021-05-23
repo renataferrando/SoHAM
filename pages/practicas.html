@@ -11,6 +11,7 @@
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<title>SoHAM - Practicas</title>
+	<link rel="shortcut icon" type="image/jpg" href="../img/loto2fv.png"/>
 </head>
 <body class="body">
 	<div class="container-fluid">
@@ -50,17 +51,15 @@
 		</div>
 	</div>
 	<div class="container-fluid">
-		<div class="row">
+		<div class="row" id="contRow">
 			<div class="col-md-6 col-xs-12" id="contP1" data-aos="fade-right"data-aos-duration="800">
-				<div class="contP1_bg">
-					<img src="../img/yoga2.jpg" class="contP1_img1">	
-				</div>
+				<img src="../img/yoga2.jpg" class="contP1_img1">	
 			</div>
 			<div class="col-md-6 col-xs-12" id="contP2">
 				<h1 class="contP2_tit" data-aos="zoom-in"data-aos-duration="1000">YOGA</h1>
 			</div>
 			<div class="col-md-12 col-xs-12" id="contP2">
-				<p class="contP2_parr">El Yoga Integral es un método integrador de técnicas: busca que las personas practiquen diversos tipos de técnicas de yoga, tanto de carácter físico, como mental y espiritual, de acuerdo a sus posibilidades, interés y facilidad. <br>Su objetivo final es lograr la sanidad tanto del cuerpo físico como también mental, para así alcanzar la máxima purificación en el plano espiritual.</p><br><br>
+				<p class="contP2_parr">El Yoga Integral es una combinación de métodos tradicionales específicos. <b>Su objetivo es el desarrollo armonioso de todos los aspectos del ser humano.</b> Es decir, el cuerpo físico, la parte emocional, la intelectual y la espiritual.<br>Se busca ofrecer a los practicantes, una herramienta útil para vivir una vida feliz, tranquila y saludable.</p><br><br>
 			</div>
 			<div class="col-md-6 col-xs-12" id="contP3">
 				<img src="../img/yoga12.jpg" class="contP3_img">
@@ -75,11 +74,9 @@
 			<div class="col-md-6 col-xs-12" id="contP2">
 				<h1 class="contP2_tit"data-aos="zoom-in"data-aos-duration="1000">MEDITACION</h1>
 			</div>
-			<div class="col-md-6 col-xs-12" id="contP2" data-aos="fade-left"data-aos-duration="800">
-				<div class="contP1_bg-v">
-					<img src="../img/medi1.jpg" class="contP1_img1">	
-				</div>
-			</div>
+			<div class="col-md-6 col-xs-12" id="contP1" data-aos="fade-left"data-aos-duration="800">
+				<img src="../img/medi1.jpg" class="contP1_img1v">
+			</div>	
 			<div class="col-md-12 col-xs-12" id="contP2">
 				<p class="contP2_parr">La meditación Vipassana conocida como meditación del “insight” es una práctica de meditación budista tradicional, que enfatiza en la conciencia de la respiración, sintonizando el aire que entra y sale a través de la nariz. También se centra en etiquetar pensamientos y experiencias a medida que surgen...</p><br><br>
 			</div>
@@ -92,11 +89,9 @@
 					<h5 class="contP3_parr">DALAI LAMA.</h5>
 				</div>
 			</div>
-			<div class="col-md-6 col-xs-12" id="contP2">
-				<div class="contP1_bg" data-aos="fade-right"data-aos-duration="800">
-					<img src="../img/reiki.jpg" class="contP1_img1">	
-				</div>	
-			</div>
+			<div class="col-md-6 col-xs-12" id="contP1" data-aos="fade-right"data-aos-duration="800">
+				<img src="../img/reiki.jpg" class="contP1_img1">	
+			</div>	
 			<div class="col-md-6 col-xs-12" id="contP2">
 				<h1 class="contP2_tit" data-aos="zoom-in" data-aos-duration="1000">REIKI</h1>
 			</div>
@@ -121,22 +116,10 @@
         <div class="row">
           <div class="col-sm-12 col-md-6">
             <h6>Acerca de</h6>
-            <p class="text-justify"><i>So Ham </i> es un espacio creado en el 2021... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis cupiditate ut nisi, nulla voluptas sequi illum dolor neque quod aspernatur impedit quisquam hic dignissimos, quasi ad consequuntur odit possimus commodi.</p>
+            <p class="text-justify"><i>So Ham </i> es un espacio creado en el 2021 en la ciudad de La Plata, provincia de Buenos Aires, Argentina.<br>Se dan clases grupales de Yoga Integral a cargo de la instructora Josefina Ferrando.<br>Las sesiones de Reiki son a coordinar con la Instructora.<br>La práctica de meditación se realiza dos veces por semana y es incluida en la cuota general.<br>No dudes en consultarnos!</p>
           </div>
-          <div class="col-xs-6 col-md-3">
-          	<div class="categorias">
-	            <h6>Categories</h6>
-	            <ul class="footer-links">
-	              <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-	              <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-	              <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-	              <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-	              <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-	              <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
-	            </ul>
-            </div>
-          </div>
-          <div class="col-xs-6 col-md-3">
+          
+          <div class="col-xs-6 col-md-3" id="contQL">
             <h6>Quick Links</h6>
             <ul class="footer-links">
               <li><a href="http://scanfcode.com/about/">About Us</a></li>
@@ -161,8 +144,8 @@
             <ul class="social-icons">
               <li><a class="facebook" href="#"><i class="fa fa-facebook-square"></i></a></li>
               <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a class="wap" href="#"><i class="fa fa-whatsapp"></i></a></li>   
             </ul>
           </div>
         </div>
