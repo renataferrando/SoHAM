@@ -11,15 +11,18 @@
   margin: 0;
   padding: 0;
 }
-.collapse {
-  flex-grow: 0;
-}
-
+.navbar-collapse, .navbar-toggler {         
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;  
+} 
 .navbar-brand__logo {
   width: 50%; 
 }
 .container-fluid {
   padding: 0;
+}
+.dropdown-item:active {
+  background-color: rgba(91, 44, 111);
 }
 
 .container-fluid__capa {
@@ -28,6 +31,9 @@
   width: 30%;
   top: 70px;
   right: 50px;
+}
+.container-fluid__capa-mob {
+  display: none;
 }
 
 .tituloMain {
@@ -184,6 +190,12 @@ b {
 }
 
 /*Nosotros*/
+.container-fluid_mob {
+  display: none;
+}
+.container-fluid_full {
+  display: flex;
+}
 .body-AB {
   background: #FF8000;
   background-size: cover;
@@ -267,124 +279,301 @@ b {
 #contQL {
   margin-left: 250px;
 }
+
+/*horarios*/
+
+.blue {
+  background: #CB4335;
+}
+.tab {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.purple {
+  background: #9b59b6;
+}
+
+.navy {
+  background: #48C9B0;
+}
+
+.green {
+  background: #16A085;
+}
+
+.red {
+  background: #5D6D7E;
+}
+
+.orange {
+  background: #424949;
+}
+
+.cs335, .cs426, .md303, .md352, .md313, .cs240 {
+  font-weight: 300;
+  cursor: pointer;
+}
+
+
+table {
+  font-family: montserrat, sans-serif;
+  color: #efefef;
+  font-size: 12pt;
+  text-align: center;
+}
+table tr:nth-child(2n) {
+  background: #eff0f1;
+  border: solid 1px white;
+}
+table tr:nth-child(2n+3) {
+  background: #fff;
+  border: solid 1px white;
+}
+table th, table td {
+  padding: 1em;
+  width: 10em;
+  border: solid 1px white;
+}
+
+.days, .time {
+  background: #512E5F;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.time {
+  width: 3em;
+}
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+  -moz-transition: ease 0.5s all;
+  -o-transition: ease 0.5s all;
+  -webkit-transition: ease 0.5s all;
+  transition: ease 0.5s all;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 160px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background-color: black;
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid black;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  bottom: 90%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+
+
 @media only screen and (min-width: 360px) and (max-width: 1239px) {
   /*main*/
    .container-fluid__capa {
+    display: none;
+  }
+    .container-fluid__capa-mob {
+    display: flex;
+    position: relative;
+    background: rgba(30, 0, 0, 0.5);
+    width: 100%;
+    top: 0;
+    bottom: 1000px;
+    right: 0;
+  }
+  .carousel-item {
+    height: auto;
+  }
+  /*practicas*/
+  .contP1_img1 {
+  position: relative;  
+  width: 100%;
+  left:0;
+  top: 0;
+  }
+  .contP1_img1v {
     position: relative;
     width: 100%;
     top: 0;
     right: 0;
   }
-  /*practicas*/
-    .contP1_img1, .contP1_img1v {
-    height: 233px;
-    width: 345px; 
-    position: sticky;
-    top: 30px;
+  #contRow {
+    margin-top: 0;
+  }
 
-    }
-  .contP3_img, .contP3_img-v {
+  .contP3_img {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+  .contP3_img-v {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+
+  #contP1 {
+    background: rgba(91, 44, 111);
+  }
+  #contP2 {
     display: flex;
-    position: sticky;
-    width: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0;
+    height: auto;
+  }
+
+  #contP3 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 20px;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  b {
+    font-weight: bold;
+  }
+
+  .contP2_tit {
+    display: flex;
+    font-weight: 200;
+    position: relative;
+
+  }
+  .contP2_parr {
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    padding: 15px;
   }
 
   .contP3_parr {
-    width: auto;
+    font-size: 11pt;
+    font-weight: 300;
+    font-style: italic;
+    width:100%;
+    margin-bottom: 30px;
+    padding: 15px;
   }
-  
-  .carousel-item {
-    height: auto;
-  }
-  .tituloMain, #map {
-    padding: 0;
-    color: white;
-    margin-top: 0;
-  }
-  .btn__Main, {
-    margin-bottom:0;}
-  
-  .texto {
-    padding-bottom: 20px;
-    margin:0;
-  }
-  .tituloMain {
-  padding: 20px;
-  color: white;
-  margin: 0;}
-  .categorias {
-  margin-left: 0;
-  }
-  .Ad, .wap {
-    color: black;
-    margin-left: 0;
-  }
-  #Cont-dat {
-    margin- top: 10px;
-    padding: 0;
-    left: 0;
+  .contP3_tit {
+    position: relative;
+    font-weight: 500;
+    font-style: italic;
+    padding: 15px;
   }
   #contQL {
-  margin-left: 0;
+    margin: 0;
   }
+
   /*Nosotros*/
-  .body-AB {
-  background: #FF8000;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+  .container-fluid_mob {
+    display: flex;
+  }
+  .container-fluid_full {
+    display: none;
   }
 
   #contNP {
-    display: flex;
+    display: block;
     justify-content: center;
-    margin-top: 80px;
-    margin-bottom: 150px;
-
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .contN {
-    display: flex;
-    align-self: center;
+    display: block;
     background-color: white;
     height: auto;
-    width: 80%;
+    width: 100%;
   }
 
   .contN-tit {
-    display: flex;
-    justify-content: center;
-    align-self: center;
+    display: block;
+    justify-content: left;
     font-weight: 200;
     padding: 20px;
-    margin-left:50px;
+    margin-left:0;
     font-size: 40pt;
   }
 
   .contN2-parr {
+    display: block;
     font-weight: 300;
-    padding: 50px;
-    margin-left: 50px;
-    margin-top: 50px;
+    padding: 20px;
+    margin-left: 0;
+    margin-top: 0;
     text-align: justify;
+    width: 100%;
   }
 
   .contN-1 {
-    display: flex;
+    display: block;
     justify-content: center;
   }
 
   .contN2 {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    flex-direction: row;
   }
 
   .contN-img {
-    width: 50%;
+    width: 100%;
     display: flex;
     align-self: center;
-    margin-bottom: 50px;
+    margin-bottom: 0;
   }
   #contNP1 {
     display: flex;
@@ -394,12 +583,13 @@ b {
     border: 2px solid white;
     padding: 30px;
     position: relative;
-    left: 200px;
+    left: 0;
   }
   .contN2-h2, .contN2-h3{
-    margin-right: 50px;
+    margin-right: 0;
     text-align: right;
     font-style: italic;
+    padding: 20px;
   }
   .contN2-h2 {
     font-size: 16pt;  
@@ -408,8 +598,49 @@ b {
     font-size: 12pt;
     margin-bottom: 50px; 
   }
-}
+  #contQL {
+    margin-left: 0;
+  }
+    
+  /*contacto*/
 
+  .imgC {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  height: 500px;
+  }
+
+  .contactame {
+    font-weight: 200;
+    color: black;
+  }
+  .wap {
+    font-size: 11pt;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  .Ad {
+    font-size: 12pt;
+    margin-top: 15px;
+  }
+  #Cont-dat {
+    margin: 0;
+    padding: 20px;
+    left: 0;
+  }
+  #map {
+   padding: 0;
+   width: 80%;
+  }
+  /*horarios*/
+  .tab {
+    display: flex;
+    justify-content: flex-start;
+    overflow: scroll;
+  }
+
+}
 .site-footer {
   background-color: #26272b;
   padding: 45px 0 20px;
